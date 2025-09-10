@@ -1,6 +1,9 @@
-from PIL import Image
+import cv2
+import pytesseract
+from PIL import Image, ImageEnhance
 
-im_file ="34abc123.png"
+img_file = 'data/biruni.jpg'
+img = cv2.imread(img_file)
 
-im = Image.open(im_file)
-im.rotate(180).show()
+cv2.imshow('image', img)
+cv2.waitKey(0)
